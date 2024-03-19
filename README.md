@@ -1,7 +1,7 @@
-# Comfyui-SAL-VTON
+# Comfyui-SAL-VTON : Dressup your models!
 This is my quick implementation of the SAL-VTON node for ComfyUI.
 
-### See the paper[^1] for details 
+### Based on the paper [Keyu Y. Tingwei G. et al. (2023). Linking Garment with Person via Semantically Associated Landmakrs for Virtual Try-On](https://openaccess.thecvf.com/content/CVPR2023/papers/Yan_Linking_Garment_With_Person_via_Semantically_Associated_Landmarks_for_Virtual_CVPR_2023_paper.pdf) 
 
 
 ### Installation
@@ -19,6 +19,6 @@ This is my quick implementation of the SAL-VTON node for ComfyUI.
 ![workflow.png](media%2Fworkflow.png)
 
 ### Acknowledgement
-[^1][Keyu Y. Tingwei G. et al. (2023). Linking Garment with Person via Semantically Associated Landmakrs for Virtual Try-On](https://openaccess.thecvf.com/content/CVPR2023/papers/Yan_Linking_Garment_With_Person_via_Semantically_Associated_Landmarks_for_Virtual_CVPR_2023_paper.pdf)
+[Keyu Y. Tingwei G. et al. (2023). Linking Garment with Person via Semantically Associated Landmakrs for Virtual Try-On](https://openaccess.thecvf.com/content/CVPR2023/papers/Yan_Linking_Garment_With_Person_via_Semantically_Associated_Landmarks_for_Virtual_CVPR_2023_paper.pdf)
 
-This is a simple wrapper around the inference code available on [ModelScope](https://github.com/modelscope/modelscope). Props to the original authors.
+This is a simple wrapper around the inference code available on [ModelScope](https://github.com/modelscope/modelscope). Thanks to the original authors for their work.
