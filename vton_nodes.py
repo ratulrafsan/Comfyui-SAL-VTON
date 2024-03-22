@@ -8,6 +8,9 @@ from .sal import inferSAL
 from PIL import Image, ImageOps, ImageSequence
 import folder_paths
 
+
+node_category = "Clothing - SAL-VTON"
+
 class SALVTONApply:
     def __init__(self):
         pass
@@ -22,7 +25,7 @@ class SALVTONApply:
             }
         }
 
-    CATEGORY = "clothing"
+    CATEGORY = node_category
 
     RETURN_TYPES = ("IMAGE", )
     FUNCTION = "apply_salvaton"
@@ -48,7 +51,7 @@ class RandomImageFromDir:
 
     RETURN_TYPES = ("IMAGE", "MASK")
     FUNCTION = "load_image"
-    CATEGORY = "Loader/RandomImageFromDir"
+    CATEGORY = node_category
 
     def load_image(self, folder_path):
         files = os.listdir(folder_path)
@@ -83,6 +86,10 @@ class RandomImageFromDir:
             output_mask = output_masks[0]
 
         return (output_image, output_mask)
+
+    @classmethod
+    def IS_CHANGED(s, image):
+        return float("NaN")
 
 
 NODE_CLASS_MAPPINGS = {
