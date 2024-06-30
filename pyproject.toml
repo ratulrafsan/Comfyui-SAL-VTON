@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-sal-vton"
+description = "Dressup your models!\nThis is my quick implementation of the SAL-VTON node for ComfyUI.\nBased on the paper [a/Keyu Y. Tingwei G. et al. (2023). Linking Garment with Person via Semantically Associated Landmakrs for Virtual Try-On](https://openaccess.thecvf.com/content/CVPR2023/papers/Yan_Linking_Garment_With_Person_via_Semantically_Associated_Landmarks_for_Virtual_CVPR_2023_paper.pdf)"
+version = "1.0.0"
+license = "LICENSE"
+dependencies = ["torch", "numpy", "pil", "torchvision"]
+
+[project.urls]
+Repository = "https://github.com/ratulrafsan/Comfyui-SAL-VTON"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "Comfyui-SAL-VTON"
+Icon = ""
