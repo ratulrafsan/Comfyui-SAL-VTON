@@ -27,11 +27,13 @@ class SALVTONApply:
 
     CATEGORY = node_category
 
-    RETURN_TYPES = ("IMAGE", )
+    RETURN_TYPES = ("IMAGE", "IMAGE", "IMAGE", )
+    RETURN_NAMES = ("SAL-VTON", "Landmarked Person", "Landmarked Garment")
     FUNCTION = "apply_salvaton"
 
     def apply_salvaton(self, garment, person, garment_mask):
-        return (inferSAL(folder_paths.get_folder_paths('salvton')[0], person, garment, garment_mask),)
+        sal_vton, annotated_person, annotated_garment = inferSAL(folder_paths.get_folder_paths('salvton')[0], person, garment, garment_mask)
+        return (sal_vton, annotated_person, annotated_garment, )
 
 
 class RandomImageFromDir:
