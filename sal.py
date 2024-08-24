@@ -183,4 +183,11 @@ def inferSAL(model_path: str, person_img: torch.Tensor, garment_img: torch.Tenso
 
         image = Image.fromarray(rgb).resize((w_ori, h_ori))
         image_t = torch.from_numpy(np.array(image).astype(np.float32)/255.0)[None,]
-    return image_t
+        person_image_t = torch.from_numpy(np.array(
+                Image.fromarray(p_im.astype(np.uint8)).resize((w_ori, h_ori))
+            ).astype(np.float32)/255.0)[None,]
+        garment_image_t = torch.from_numpy(np.array(
+                Image.fromarray(c_im.astype(np.uint8)) #.resize((w_ori, h_ori))
+            ).astype(np.float32)/255.0)[None,]
+
+    return image_t, person_image_t, garment_image_t
